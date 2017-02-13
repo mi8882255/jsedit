@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TextEdit</title>
+
+    <script
+            src="http://code.jquery.com/jquery-3.1.1.js"
+            integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+            crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js"></script>
+
+    <link rel="stylesheet" href="css/editor.css">
+    <script src="js/editor.js"></script>
+</head>
+
+<body>
+    <div class="container container-table">
+        <div class="row" class="btnz">
+            <div class="col-md-3 nomargin">
+                <input id="fname" type="input" class="form-control fl" placeholder="file" disabled>
+            </div>
+            <button id="load" class="btn btn-s fl"><span class="glyphicon glyphicon-open" disabled></span></button>
+            <button id="save" class="btn btn-s fl"><span class="glyphicon glyphicon-save" disabled></span></button>
+            <button id="run" class="btn btn-success btn-s fr"><span class="glyphicon glyphicon-play"></span></button>
+        </div>
+
+        <div class="row editareas">
+            <div class="col-md-6 fullh">
+                <div class="row halfh">
+                        <textarea id="src" placeholder="Source ($('#src').val())"></textarea>
+                </div>
+                <div class="row halfh">
+                     <textarea id="dst" placeholder="Destination ($('#dst').val('value'))"></textarea>
+                </div>
+            </div>
+
+            <div class="col-md-6 fullh" style="padding-bottom: 6px;">
+                <div class="row fullh">
+                    <div id="editor">//write code here
+var text=$('#src').val();
+
+//do something
+
+$('#dst').val(text);</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
